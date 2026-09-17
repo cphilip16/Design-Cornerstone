@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root { font-family: Manrope, sans-serif; color: #1d2b28; background: #f5f1e8; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; cursor: pointer; }
+.app-shell { max-width: 880px; min-height: 100vh; margin: auto; padding: 32px 32px 70px; }
+header { display: flex; align-items: center; justify-content: space-between; }
+.brand { color: #1d2b28; text-decoration: none; font: 28px 'DM Serif Display', serif; letter-spacing: -.7px; }
+.brand span { color: #e46d4e; font: 18px Manrope; vertical-align: 4px; margin-right: 3px; }
+.header-note { color: #71807a; font-size: 12px; margin: 0; }
+.hero { display: flex; flex-direction: column; align-items: center; padding: 65px 0 58px; }
+.mode-switch { display: flex; gap: 3px; padding: 4px; background: #eae4d8; border-radius: 99px; }
+.mode-switch button { border: 0; background: transparent; color: #67726d; border-radius: 99px; padding: 9px 23px; font-size: 12px; font-weight: 700; }
+.mode-switch button.active { background: #fffdf8; color: #1d2b28; box-shadow: 0 1px 5px #766c5b2c; }
+.timer-wrap { position: relative; width: 290px; height: 290px; margin: 30px 0; }
+.timer-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.timer-ring circle { fill: none; stroke-width: 8; }
+.track { stroke: #e6dfd1; }
+.progress { stroke: #d9674a; stroke-linecap: round; transition: stroke-dashoffset .5s linear, stroke .25s; }
+.timer-copy { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.timer-copy p { color: #75817a; font: 10px 'DM Mono', monospace; letter-spacing: 1.4px; margin: 0 0 9px; }
+.timer-copy time { font: 68px 'DM Serif Display', serif; letter-spacing: -3px; color: #24322e; }
+.primary { background: #27443c; color: #fffdf8; padding: 15px 44px; border: 0; border-radius: 5px; font-size: 14px; font-weight: 700; box-shadow: 0 4px 0 #19342c; transition: transform .15s, box-shadow .15s; }
+.primary:active { transform: translateY(3px); box-shadow: 0 1px 0 #19342c; }
+.timer-actions { display: flex; gap: 26px; margin-top: 26px; }
+.timer-actions button { border: 0; background: none; color: #6d7872; font-size: 12px; padding: 2px; }.timer-actions button:hover { color: #d9674a; }.timer-actions span { font-size: 17px; vertical-align: -1px; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #ded8cb; border-bottom: 1px solid #ded8cb; }
+.summary article { display: flex; flex-direction: column; gap: 4px; padding: 24px 24px 25px; }.summary article + article { border-left: 1px solid #ded8cb; }
+.stat-number { font: 29px 'DM Serif Display', serif; color: #27443c; }.stat-label { color: #76817b; font-size: 11px; }
+.recent { padding-top: 44px; }.section-title { display: flex; justify-content: space-between; align-items: baseline; }.section-title h1 { font: 26px 'DM Serif Display', serif; margin: 0; }.section-title p { margin: 0; color: #77827c; font-size: 11px; }
+.empty-state { border: 1px dashed #d6cfc0; margin-top: 20px; min-height: 116px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #8a938d; }.empty-state span { font-size: 25px; color: #d9674a; }.empty-state p { font-size: 12px; }
+ul { margin: 20px 0 0; padding: 0; list-style: none; border-top: 1px solid #ded8cb; } li { display: flex; justify-content: space-between; padding: 15px 4px; border-bottom: 1px solid #ded8cb; font-size: 12px; } li time { color: #77827c; }
+@media (max-width: 560px) { .app-shell { padding: 24px 20px 50px; }.header-note { display: none; }.hero { padding: 52px 0 45px; }.timer-wrap { width: 255px; height: 255px; }.timer-copy time { font-size: 59px; }.summary article { padding: 19px 12px; }.stat-number { font-size: 25px; }.stat-label { font-size: 10px; }.section-title { display: block; }.section-title p { margin-top: 7px; }.recent { padding-top: 36px; } }
